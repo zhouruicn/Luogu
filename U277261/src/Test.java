@@ -72,6 +72,14 @@ public class Test {
         System.out.println(divide8.rp);
         System.out.println(divide8.rs);
         System.out.println(divide8.r);
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!4,1,4");
+        Divide divide9 = div(4, 1, 4);
+        System.out.println(divide9.l);
+        System.out.println(divide9.ls);
+        System.out.println(divide9.lp);
+        System.out.println(divide9.rp);
+        System.out.println(divide9.rs);
+        System.out.println(divide9.r);
     }
 
     public static Divide div(int size, int l, int r) {
@@ -100,17 +108,18 @@ public class Test {
         } else if (lm == 1) {
             divide.lp = l / size + 1;
         } else {
+
             divide.lp = l / size + 2;
         }
         // set rp
         if (rm == 0) {
-            divide.rp = r / size + 1;
+            divide.rp = r / size;
         } else {
             divide.rp = r / size;
         }
         // set rs
         if (rm == 0) {
-            divide.rs = r - 1;
+            divide.rs = r + 1;
         } else {
             divide.rs = (r / size) * size + 1;
         }
@@ -127,7 +136,6 @@ public class Test {
         private Integer rp;
         private Integer rs;
         private Integer r;
-        List<Integer> piece = new ArrayList<>();
     }
 
 }
